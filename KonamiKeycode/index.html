@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            place-items: center;
+        }
+
+        .container h1 {
+            font-size: 100px;
+            color: #333;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container h1 .replaceCode {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Good morning to <span class="replaceCode">Daniel</span></h1>
+    </div>
+    <script>
+        let pressed = []
+        const secretCode = 'wesbos'
+        const changeCode = document.querySelector(".replaceCode")
+        window.addEventListener("keyup", (e) => {
+            pressed.push(e.key)
+            pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
+            console.log(pressed);
+            if (pressed.join('').includes(secretCode))
+                changeCode.textContent = secretCode
+            console.log(hello);
+        })
+
+    </script>
+</body>
+
+</html>

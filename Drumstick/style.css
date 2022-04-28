@@ -1,0 +1,69 @@
+body {
+  background-image: url("img/bg-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-top: 20%;
+}
+
+body .keys .key {
+  color: #2f2f2f;
+  padding: 5px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 70px;
+  height: 65px;
+  margin-right: 15px;
+  -webkit-box-shadow: 0 3px 6px #2f2f2f30;
+          box-shadow: 0 3px 6px #2f2f2f30;
+  -webkit-transition: all 0.05s ease;
+  transition: all 0.05s ease;
+}
+
+body .keys .key__name {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+body .keys .key__sound {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body .keys .sound {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border: 2px solid red;
+  -webkit-box-shadow: 0 3px 6px 0 red;
+          box-shadow: 0 3px 6px 0 red;
+}
+/*# sourceMappingURL=style.css.map */

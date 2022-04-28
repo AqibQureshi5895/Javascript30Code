@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const inventors = [
+            { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+            { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+            { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+            { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+            { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+            { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+            { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+            { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+            { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+            { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+            { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+            { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+        ];
+
+        const people = [
+            'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
+            'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
+            'Benn, Tony', 'Benson, Leana', 'Bent, Silas', 'Berle, Milton', 'Berry, Halle', 'Biko, Steve', 'Beck, Glenn', 'Bergman, Ingmar', 'Black, Elk', 'Berio, Luciano',
+            'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 'Bevan, Aneurin', 'Ben-Gurion, David', 'Bevel, Ken', 'Biden, Joseph', 'Bennington, Chester', 'Bierce, Ambrose',
+            'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
+        ];
+
+        //1.  filter list of investors that were born in 1500's 
+
+        // note: filter function itself loops over the array -
+        // so in order to use that lopp element we have to pass parameter in filter function
+
+        // const filtered = inventors.filter(function (element) {
+        //     if ((element.year >= 1500) && (element.year < 1600)) {
+        //         return element;
+        //     }
+        // });
+        // console.log(filtered);
+
+        //2. give array of investors last and first name
+        // const name = inventors.map(inventor => (inventor.first + " " + inventor.last))
+        // console.log(name);
+
+        // 3. sort  inventor according to bithdate from oldest to youngest
+        // const birthdate = inventors.sort(function (a, b) {
+
+        //     if (a.year > b.year) {
+        //         return 1
+        //     }
+        //     else {
+        //         return -1
+        //     }
+        // })
+        // console.table(birthdate);
+        // // or using ternary operator
+        // const birth = inventors.sort((a, b) => a.year > b.year ? 1 : -1)
+        // console.table(birth);
+
+        // 4.how man years did all investors live
+        //Array.prototype.reduce() reduce(previousvalue,aurrentvalue,array()=> {..},initialvalue)
+        // const totalYears = inventors.reduce(function (total, inventor) {
+        //     return total + (inventor.passed - inventor.year)
+        // }, 0)
+        // console.log(totalYears);
+
+        //5. sort the inventors by years lived
+
+        // const yearslived = inventors.sort((a, b) => {
+        //     let ageOfA = a.passed - a.year
+        //     let ageOfB = b.passed - b.year
+        //     console.log(ageOfA);
+
+        //     if (ageOfA > ageOfB) {
+        //         return 1
+        //     }
+        //     else {
+        //         return -1
+        //     }
+        // })
+        // console.table(yearslived);
+
+        // // or
+
+        // const Lived = inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1)
+
+        // console.log("Lived");
+        // console.table(Lived);
+
+        // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+        // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+        // we can select dom element from existing dom elements
+        const page = document.querySelectorAll('.mw-category-group a');
+        const links = [...page]; // converting nodelist to array using spread operator
+
+        const de = links.map(link => link.textContent);
+
+        const final = de.filter(word => word.includes("de"))
+        console.table(final);
+
+
+
+        // 7. sort Exercise
+        // Sort the people alphabetically by last name
+
+        const alphabet = people.sort((a, b) => {
+
+            const [alast, afirst] = a.split(", ");
+            // console.log(firstletter, lastletter);
+            const [blast, bfirst] = b.split(", ");
+
+            return alast > blast ? 1 : -1
+
+        })
+        console.table(alphabet);
+
+        // 8. Reduce Exercise
+        // Sum up the instances of each of these
+        const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+    </script>
+
+</body>
+
+</html>

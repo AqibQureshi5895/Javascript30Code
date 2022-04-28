@@ -1,0 +1,63 @@
+body {
+  background-image: url("img/photo-1569982175971-d92b01cf8694.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.clock {
+  height: 300px;
+  width: 300px;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: 150px auto;
+  -webkit-box-shadow: 0 3px 6px #333;
+          box-shadow: 0 3px 6px #333;
+  padding: 8px;
+}
+
+.clock-face {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.clock-hand {
+  width: 48%;
+  height: 6px;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(wheat));
+  background-image: linear-gradient(to right, white, wheat);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-box-shadow: 0 1px 3px #333;
+          box-shadow: 0 1px 3px #333;
+}
+
+.clock .hour-hand {
+  width: 40%;
+  left: 10%;
+}
+
+.clock .mins-hand {
+  width: 44%;
+  left: 6%;
+}
+
+.clock .dot {
+  height: 10px;
+  width: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ac7dff), to(#ec7fff));
+  background-image: linear-gradient(#ac7dff, #ec7fff);
+  border-radius: 50%;
+  position: absolute;
+  top: 49%;
+  left: 49%;
+}
+/*# sourceMappingURL=style.css.map */

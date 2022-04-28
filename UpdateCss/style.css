@@ -1,0 +1,32 @@
+:root {
+  --color: red;
+  --blur: 10px;
+  --space: 10px;
+}
+
+.input-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 20px auto 20px auto;
+  padding: 10px;
+  background-color: bisque;
+  box-shadow: 0 3px 6px 0 #00000015;
+}
+.input-holder label {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.main-img {
+  margin: auto;
+  width: fit-content;
+  padding: var(--space);
+  background-color: var(--color);
+  filter: blur(var(--blur));
+}
+img {
+  height: 500px;
+}

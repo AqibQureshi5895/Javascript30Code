@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+.container ul {
+  padding: 20px;
+}
+
+.container ul li {
+  list-style: none;
+  padding: 10px 20px;
+  border: 3px solid green;
+  border-bottom: none;
+}
+
+.container ul li:last-child {
+  border-bottom: 3px solid green;
+}
+
+.container ul li:nth-child(odd) {
+  background-color: lightcoral;
+}
+
+.container ul li:nth-child(odd) a {
+  color: white;
+}
+
+.container ul li:nth-child(even) {
+  background-color: lightgray;
+}
+
+.container ul li a {
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: capitalize;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
